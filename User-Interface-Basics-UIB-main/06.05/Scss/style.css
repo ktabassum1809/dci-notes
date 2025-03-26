@@ -1,0 +1,26 @@
+header {
+  background: #eee;
+}
+header nav li {
+  display: inline-block;
+}
+header nav li a {
+  text-decoration: none;
+}
+
+body {
+  background: rgb(214, 191, 5);
+}
+
+main h1 {
+  color: green;
+  font-size: 60px;
+  background: lightpink;
+}
+main p {
+  color: green;
+  font-size: 40px;
+  background: lightpink;
+}
+
+/*# sourceMappingURL=style.css.map */

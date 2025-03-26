@@ -1,0 +1,22 @@
+body {
+  height: 100vh;
+  background-image: linear-gradient(#fff, rgba(0, 0, 0, 0.5), #000),
+    url(assets/background-sunset.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  background-color: white;
+  background-image: radial-gradient(
+    circle at 65%,
+    rgba(255, 255, 255, 1),
+    #f9f9f9,
+    #555
+  );
+}

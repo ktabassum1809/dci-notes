@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* some pseudo classes for inputs: */
+      :valid {
+        color: green;
+      }
+      :invalid {
+        color: red;
+      }
+      :required {
+        color: orange;
+      }
+
+      form {
+        background-color: rgb(200, 150, 50);
+        padding: 40px;
+      }
+      label {
+        display: inline-block;
+        width: 200px;
+      }
+      label[for="policy"] {
+        width: 500px;
+      }
+      label[for="biography"] {
+        display: block;
+      }
+      .box {
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- be careful when choosing the request method, 'get' requests send the data in the URL visible for all to see; that's why we usually use the method post with forms -->
+    <form action="http://localhost:4000" method="get">
+      <!-- most important/ commonly used input types -->
+      <div class="box">
+        <label for="username"> Username: </label>
+        <input name="username" id="username" type="text" />
+      </div>
+      <div class="box">
+        <label for="email">Email:</label>
+        <input name="email" id="email" type="email" />
+      </div>
+
+      <div class="box">
+        <label for="pass"> Password: </label>
+        <input
+          id="pass"
+          type="password"
+          name="password"
+          minlength="8"
+          maxlength="10"
+        />
+      </div>
+
+      <div class="box">
+        <label for="age"> Age: </label>
+        <input type="number" required min="18" max="99" name="age" id="age" />
+      </div>
+
+      <div class="box">
+        <div class="box">
+          <!-- input type radio must have the same 'name=' attribute; in order to be linked together. They also need a 'value' attribute to define what value to send to the backend -->
+          <input
+            checked
+            value="free"
+            required
+            id="free"
+            name="subscription"
+            type="radio"
+          />
+          <label for="free"> Free Subscription </label>
+        </div>
+        <div class="box">
+          <input
+            required
+            value="three"
+            id="3month"
+            name="subscription"
+            type="radio"
+          />
+          <label for="3month"> 3 Months Subscription </label>
+        </div>
+        <div class="box">
+          <input
+            value="one-year"
+            required
+            id="1year"
+            name="subscription"
+            type="radio"
+          />
+          <label for="1year"> 1 Year Subscription </label>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box">
+          <input type="checkbox" required name="policy" id="policy" />
+          <label for="policy">
+            Please read and accept our <a href="#"> Terms of service </a> and
+            <a href="#">Privacy Policy</a>
+          </label>
+        </div>
+        <div class="box">
+          <input type="checkbox" name="news-letter" id="news" />
+          <label for="news"> subscribe to our news letter </label>
+        </div>
+      </div>
+
+      <div class="box">
+        <label for="visitation-time"> Appointment Time: </label>
+        <input id="visitation-time" type="time" />
+      </div>
+
+      <div class="box">
+        <label for="payment"> Payment method: </label>
+        <select name="payment-service" id="payment">
+          <option value="paypal">paypal</option>
+          <option value="visa">visa</option>
+          <option selected value="mastercard">mastercard</option>
+          <option value="google-pay">google pay</option>
+        </select>
+      </div>
+      <div class="box">
+        <label for="avatar"> Profile Picture: </label
+        ><input type="file" name="avatar" id="avatar" />
+      </div>
+      <div class="box">
+        <label for="biography"> About you: </label>
+        <textarea
+          name="biography"
+          id="biography"
+          cols="30"
+          rows="10"
+        ></textarea>
+      </div>
+      <button>submit</button>
+    </form>
+  </body>
+</html>

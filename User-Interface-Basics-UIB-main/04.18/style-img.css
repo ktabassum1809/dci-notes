@@ -1,0 +1,6 @@
+img {
+    width: 200px;
+    border: 20px solid green;
+    border-radius: 25px;
+    float: left;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .grid-container {
+        /* Grid */
+
+        border: 2px dashed red;
+
+        display: grid;
+        gap: 1em; /* Same as column-gap:1em; row-gap: 1em; */
+
+        padding: 1em;
+
+        /* Defines the widths of our 3 columns */
+        /* These are "explicit" tracks */
+        /* FR = Fractional unit; a special unit for grid */
+        grid-template-columns: 100px repeat(2, 1fr); /* 100px 1fr 1fr */
+
+        /* Defines the heights of the first two rows */
+        /* These are "explicit" tracks */
+        grid-template-rows: 40vh 2.5em;
+
+        /* Defines the height of extra/spillover rows */
+        /* These are "implicit" tracks */
+        /* Minimum 30px, but grow with content if needed */
+        grid-auto-rows: minmax(30px, auto);
+      }
+
+      .item {
+        border: 1px solid black;
+        padding: 10px;
+        background-color: lightsalmon;
+
+        /*for centering:*/
+        /* display: grid;
+        place-content: center; */
+
+        /* text overflow */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+      <div class="item">
+        10 Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,
+        unde nostrum! Esse pariatur, error, reiciendis asperiores vero officia
+        inventore dolorem perspiciatis, dignissimos eaque nemo ratione culpa
+        exercitationem possimus corporis obcaecati praesentium aspernatur.
+        Eligendi dignissimos et maxime neque fuga ipsam rem facilis? Sit
+        voluptas similique provident quasi numquam, aspernatur nostrum ratione!
+        Deserunt tenetur, cumque ipsum id qui quia aut, vero molestias velit
+        optio perspiciatis eveniet asperiores nihil, accusantium corrupti
+        nesciunt ea iusto ad. Iste iusto minus molestias nostrum voluptatibus
+        quo distinctio id, at enim veniam. Hic voluptatibus ipsa quidem vel
+        aliquam minus illo eius, minima, saepe consequuntur repellendus ratione?
+        Cum nihil distinctio dolor, aliquid fugiat nemo reprehenderit
+        consequatur non ut impedit odio libero ipsam excepturi dolorem,
+        accusamus voluptatem alias pariatur earum esse recusandae perferendis.
+        Eaque aspernatur dolor temporibus modi reprehenderit vero dignissimos
+        corporis nulla recusandae quod quasi fugiat atque dolore, nam deleniti,
+        itaque eligendi! Voluptate quidem magnam accusantium itaque,
+        consequuntur cum commodi mollitia, repellendus laborum nihil laboriosam
+        dolores, debitis magni. Praesentium, ea? Possimus pariatur consectetur
+        quasi laudantium expedita vel perferendis incidunt nam accusantium eius
+        non doloribus impedit velit ad fugit itaque, ipsam cum voluptate dolore.
+        Quaerat illum eos, veritatis ad cumque voluptate, aspernatur numquam
+        ullam aperiam amet, laborum quisquam dignissimos architecto.
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+.task2 {
+  font-size: 12vw;
+}
+
+.task3 {
+  background: lightpink;
+  width: 50%;
+
+  .first {
+    font-size: 18px;
+  }
+  .second {
+    font-size: 3vw;
+  }
+  .third {
+    font-size: 5vh;
+  }
+}
+
+.task4 {
+  background: lightblue;
+  font-size: 32px;
+
+  .first {
+    font-size: 18px;
+  }
+  .second {
+    font-size: 1em;
+  }
+  .third {
+    font-size: 1rem;
+  }
+}
+
+.task5 {
+  background: orange;
+  width: 80vw;
+  height: 50vh;
+}

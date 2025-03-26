@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Event propagation</title>
+	</head>
+	<body>
+		<main>
+			<button>Click me</button>
+		</main>
+
+		<script>
+			//Role of true:
+			//When you pass true as the third argument in addEventListener, you are explicitly telling the event listener to handle the event in the capturing phase instead of the default bubbling phase. Without true, the event listener will execute during the bubbling phase (which happens after the target phase).
+
+			// Event listeners for capturing phase (needs the true as a third argument)
+            
+            // document
+			document.addEventListener("click", () =>
+				console.log("document capturing"), true
+			)
+            // html
+            document.documentElement.addEventListener('click', () => console.log('HTML capturing'), true);
+            // body
+            document.body.addEventListener('click', () => console.log('Body capturing'), true);
+            // main
+            document.querySelector('main').addEventListener('click', () => console.log('Main capturing'), true);
+            //button
+            document.querySelector('button').addEventListener('click', () => console.log('Button capturing'), true);
+            
+
+            // Event listeners for bubbling phase (the important one)
+            
+            // document
+            document.addEventListener('click', () => console.log('Document bubbling'));
+            // html
+            document.documentElement.addEventListener('click', () => console.log('HTML bubbling'));
+            // body
+            document.body.addEventListener('click', () => console.log('Body bubbling'));
+            // main
+            document.querySelector('main').addEventListener('click', () => console.log('Main bubbling'));
+            // button
+            document.querySelector('button').addEventListener('click', () => console.log('Button bubbling'));
+
+            // Target phase (the event handler on the target element)
+            document.querySelector('button').addEventListener('click', (event) => {
+            console.log('Button target phase');
+            event.preventDefault(); // Prevent default action of the button (if any)
+            });
+
+
+		</script>
+	</body>
+</html>

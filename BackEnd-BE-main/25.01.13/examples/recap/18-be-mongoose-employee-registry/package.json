@@ -1,0 +1,17 @@
+{
+  "name": "18-be-mongoose-employee-registry",
+  "version": "1.0.0",
+  "description": "This exercise is about practicing how to work with relations in a MongoDB database.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "mongoose": "^8.9.4"
+  },
+  "type": "module"
+}

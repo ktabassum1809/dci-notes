@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main style="background:#fee; height:30vw">
+
+    </main>
+    <form action="">
+        <label>
+            Username
+            <input type="text" id="username">
+        </label>
+        <label>
+            Password
+            <input type="password" id="password">
+        </label>
+        <button>Log in</button>
+    </form>
+
+    <script>
+        // Document event
+        document.addEventListener("DOMContentLoaded", function(){
+            console.log("Document loaded and ready!")
+        })
+
+        // Mouse events
+        const main = document.querySelector("main")
+        main.addEventListener("click", function(e) {
+            console.log("CLICK!", e)
+        })
+        main.addEventListener("mouseenter", function(e) {
+            console.log("mouse enter", e)
+        })
+        main.addEventListener("mousemove", function(e) {
+            console.log("mouse move", e)
+            main.innerText = `x: ${e.pageX} y: ${e.pageY}`
+        })
+
+        // Keyboard event: keydown
+        const input = document.querySelector("input")
+        input.addEventListener("keyup", function(e) {
+            console.log("keyup", e)
+            console.log("e.target", e.target)
+            console.log("e.target.value", e.target.value)
+            if (e.target.value === "eloy") {
+                console.log("it's Eloy!!!!")
+            }
+        })
+
+        // Form
+        const form = document.querySelector("form")
+        form.addEventListener("submit", function(e) {
+            // stop the form submit from doing what it normally does
+            e.preventDefault()
+
+            console.log(e.target.elements)
+        })
+    </script>
+</body>
+</html>

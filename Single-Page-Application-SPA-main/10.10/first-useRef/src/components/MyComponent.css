@@ -1,0 +1,8 @@
+button:focus {
+    background-color: aquamarine;
+}
+
+.big-margin {
+    margin-top: 10vh;
+    margin-bottom: 120vh;
+}

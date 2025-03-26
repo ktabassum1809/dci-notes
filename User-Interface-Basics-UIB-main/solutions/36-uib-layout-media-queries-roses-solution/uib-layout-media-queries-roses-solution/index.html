@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roses</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main>
+      <h1>
+        <q>All my base, are belong to you</q>
+        <q>Violets are #0000FF</q>
+        <q>Roses are #FF0000</q>
+      </h1>
+
+      <picture>
+        <source media="(max-width: 600px)" srcset="./images/red-rose.jpg" />
+        <source
+          media="(min-width: 601px) and (max-width:900px)"
+          srcset="./images/blue-rose.jpg"
+        />
+        <source
+          media="(min-width: 901px)"
+          srcset="./images/colorful-rose.jpg"
+        />
+        <img src="./images/red-rose.jpg" alt="A good description" />
+      </picture>
+    </main>
+  </body>
+</html>

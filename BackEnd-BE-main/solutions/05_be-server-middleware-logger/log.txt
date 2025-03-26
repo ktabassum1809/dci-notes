@@ -1,0 +1,6 @@
+::1 | GET | /search
+::1 | GET | /search
+::1 | GET | /search
+::1 | GET | /search
+::1 | GET | /search
+::1 | GET | /search

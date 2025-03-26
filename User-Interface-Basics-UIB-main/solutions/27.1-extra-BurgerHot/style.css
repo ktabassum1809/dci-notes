@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Primary: #FFB30D;
+    --Secondary: #085454;
+    --Accent: #7A7A7A;
+    --Background-light: #FFFFFF;
+    --Text-light: #001542;
+    --Background-dark: #001542;
+    --Text-dark: #FFFFFF;
+    --Border: 3px solid var(--Secondary);
+}
+body {
+    color: var(--Text-light);
+}
+
+header {
+    padding: 30px;
+    border-bottom: 4px solid var(--Primary);
+    background-color: var(--Secondary);
+}
+
+#logo {
+    font-family: Lobster, Arial, sans-serif;
+    font-size: 30px;
+    color: var(--Primary);
+}
+
+.nav-list {  
+    float: right;
+    display: inline;
+    list-style-type: none;
+}
+
+.nav-list li {
+    margin: 15px;
+    display: inline-block;
+}
+
+a {
+    font-size: 20px;
+    color: var(--Text-dark);
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--Primary);
+}
+
+
+#banner {
+    margin: 30px auto;
+    width: 70vw;
+    height: 80vh;
+    border: 5px solid var(--Secondary);
+    border-radius: 30px;
+    font-family: Lobster, sans-serif;
+    font-size: 12vw;
+    padding: 30px;
+    background-color: var(--Primary);
+    color: var(--Secondary);
+}
+
+#products {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.card {
+    display: inline-block;
+    margin: 30px 1vw;
+    background-color: var(--Secondary);
+    color: var(--Text-dark);
+    border-radius: 20px;
+    padding: 20px;
+    width: 240px;
+    height: 200px;
+}
+
+#see-more {
+    background-color: var(--Primary);
+    color: var(--Secondary);
+    border-radius: 20px;
+    padding: 20px;
+    width: fit-content;
+    margin: auto;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+#about{
+    padding: 30px;
+    text-align: center;
+}
+
+.box {
+    display: inline-block;
+    margin: 10px 1vw;
+    background-color: var(--Secondary);
+    color: var(--Text-dark);
+    border-radius: 20px;
+    padding: 20px;
+    width: 25vw;
+    height: 180px;
+    overflow-y: hidden;
+}
+
+footer {
+    padding: 30px;
+    background-color: var(--Secondary);
+    color: var(--Accent);
+}
+
+span {
+    margin: 20px;
+    display: inline-block;
+}
+
+span li {
+    list-style-type: none;
+}
+
+.for-centering {
+    width: 50vw;
+    margin: auto;
+}
+
+#socials {
+    font-size: 30px;
+    width: fit-content;
+    margin: auto;
+    cursor: pointer;
+}

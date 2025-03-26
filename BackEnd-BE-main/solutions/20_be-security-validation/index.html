@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User registration</title>
+    <style>
+      input,
+      select {
+        margin-bottom: 1em;
+        display: block;
+      }
+
+      .errors:has(div) {
+        color: red;
+        padding: 1em;
+        background-color: lightpink;
+        border: 1px solid;
+      }
+      .success:has(div) {
+        color: darkgreen;
+        padding: 1em;
+        background-color: lightgreen;
+        border: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Florians Used Cars Marketplace</h1>
+
+    <p>
+      Register as a buyer or seller here and use the marketplace to buy or sell
+      used cars. Get rid of that old car or find a new one!
+    </p>
+
+    <form action="/register" method="post">
+      <fieldset>
+        <legend>User registration</legend>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" />
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" />
+
+        <label for="password">Password:</label>
+        <input type="text" id="password" name="password" />
+
+        <label for="is_seller">Account type</label>
+        <select name="is_seller" id="is_seller">
+          <option value="0">Buyer</option>
+          <option value="1">Seller</option>
+          <option value="2">Intermediary</option>
+        </select>
+
+        <label for="dark_mode">Use dark mode?</label>
+        <select name="dark_mode" id="dark_mode">
+          <option value="0">Yes</option>
+          <option value="1">No</option>
+          <option value="2">Device preference</option>
+        </select>
+
+        <label for="preferred_year">Preferred model year</label>
+        <input type="text" name="preferred_year" id="preferred_year" />
+
+        <input type="submit" value="Register" />
+
+        <div class="errors"></div>
+        <div class="success"></div>
+      </fieldset>
+    </form>
+    <script>
+      const message = "{{message}}";
+      const status = "{{status}}";
+
+      if (status !== "{{status}}") {
+        const selector = status === "success" ? ".success" : ".errors";
+        const div = document.querySelector(selector);
+        const messageDiv = document.createElement("div");
+        messageDiv.innerText = message;
+        div.appendChild(messageDiv);
+      }
+    </script>
+  </body>
+</html>

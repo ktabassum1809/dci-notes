@@ -1,0 +1,23 @@
+@use "header.scss";
+@use "sass:math";
+
+$mainColor: green;
+$bgColor: lightpink;
+
+body {
+  background: rgb(math.random(255), math.random(255), math.random(255));
+}
+
+main {
+  h1 {
+    color: $mainColor;
+    font-size: 60px;
+    background: $bgColor;
+  }
+
+  p {
+    color: $mainColor;
+    font-size: 40px;
+    background: $bgColor;
+  }
+}

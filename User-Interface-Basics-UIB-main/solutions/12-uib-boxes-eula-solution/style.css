@@ -1,0 +1,9 @@
+/* Your code here! */
+
+.eula-text {
+  height: 20em;
+  border: 1px solid black;
+  background-color: lightgray;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}

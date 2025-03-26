@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TEACHER: After coding is done, remember to demo this -->
+    <title>Media query advanced example</title>
+
+    <style>
+      /* Here we will be working desktop first */
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      header {
+        background: lightblue;
+        padding: 20px;
+      }
+
+      header * {
+        display: inline-block;
+      }
+
+      header li {
+        padding: 0.3em;
+        margin: 0.5em;
+        min-width: 100px;
+        background: lightcyan;
+        border-radius: 0.3em;
+        text-align: center;
+      }
+
+      main {
+        margin: 2em;
+      }
+      main img {
+        float: left;
+        margin: 0 1em 1em 0;
+      }
+      main p {
+        margin: 1em 0;
+      }
+
+      /*
+        Fantastic, we now have a simple header bar
+        However... if we make the viewport narrow,
+        our menu doesn't fit any longer.
+        Let's add alternative HTML and CSS.
+        */
+
+      button {
+        /* Hide the menu button by default */
+        display: none;
+      }
+
+      /* When the viewport to view the page is at maximum 700 px... */
+      @media (max-width: 700px) {
+        /* Hide the normal menu */
+        ul {
+          display: none;
+        }
+        /* Show the "hamburger menu" */
+        button {
+          padding: 0.3em;
+          margin: 0.5em;
+          width: 30px;
+          background: lightcyan;
+          border-radius: 0.3em;
+          text-align: center;
+          display: block;
+        }
+      }
+
+      /* When the viewport to view the page is at minimum 1000 px... */
+      @media (min-width: 1000px) {
+        header ul {
+          text-align: center;
+          display: block;
+        }
+        main {
+          /* Super wide text is hard to read! */
+          max-width: 1000px;
+          margin: auto;
+        }
+      }
+
+      /*
+        Note; media queries are usually at the very bottom of your CSS.
+        Their CSS is supposed to override the previous, so if they
+        came first, they would have no effect.
+        Try it out!
+        */
+      
+    </style>
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <button>☰</button>
+    </header>
+
+    <main>
+      <img src="https://placekeanu.com/250/250" alt />
+
+      <!-- p*10>lorem -->
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+        perferendis cupiditate dolore ab deleniti asperiores esse, fuga quasi
+        corrupti voluptate voluptatibus iusto eos velit cumque nesciunt quae
+        numquam quis architecto.
+      </p>
+      <p>
+        Aliquam, tenetur quidem! Ut eaque, temporibus rerum cupiditate facere,
+        soluta minima obcaecati, inventore quis ipsam fuga vero deleniti. Quia
+        saepe earum sequi laborum repellat doloremque vel sit officia alias
+        perferendis.
+      </p>
+      <p>
+        Inventore enim atque temporibus cum natus nostrum magni amet ex minima
+        sit officiis praesentium id, maiores exercitationem eligendi numquam
+        corporis quod dolore ullam asperiores voluptatem nesciunt veniam unde!
+        Eos, porro?
+      </p>
+      <p>
+        Labore aspernatur quidem perspiciatis voluptatum id laborum facere amet
+        ea quibusdam porro, ab delectus fuga corrupti sed doloremque optio atque
+        officia obcaecati possimus tempora corporis facilis culpa consequatur.
+        Rem, voluptatibus!
+      </p>
+      <p>
+        Autem facilis, alias ut tempora accusamus, in atque vitae maiores
+        consequuntur molestiae perspiciatis, sapiente ab est omnis iure. Odit
+        nesciunt molestias aliquid quos libero! Aperiam quis qui vel consequatur
+        sunt.
+      </p>
+      <p>
+        Repellendus sunt perferendis molestiae ipsam, sequi perspiciatis rerum
+        saepe quaerat obcaecati! Nihil, suscipit, doloremque eius illo excepturi
+        eligendi odit qui id voluptatem asperiores blanditiis quos. Veritatis
+        ducimus minus fuga eligendi!
+      </p>
+      <p>
+        Impedit, voluptas blanditiis facilis repudiandae, quae omnis rerum
+        dolore corrupti cupiditate eaque, non quo enim unde quasi aut
+        necessitatibus aliquid mollitia ratione nam repellat. Inventore dolor
+        facilis sapiente laboriosam nemo!
+      </p>
+      <p>
+        Quas ex officiis, molestiae eligendi rem, incidunt quisquam nesciunt
+        unde, quo accusantium numquam corporis eum odit earum! Quis, facilis,
+        officiis, ad enim vitae quae impedit doloremque nam eveniet est
+        laboriosam.
+      </p>
+      <p>
+        Explicabo iste nesciunt delectus nobis aspernatur culpa, reiciendis
+        sequi sunt, illum perspiciatis ipsa! Doloremque tenetur ipsum quae
+        perspiciatis, accusamus rem ad a illum aliquid odio consequuntur
+        repudiandae, autem dolor expedita?
+      </p>
+      <p>
+        Iure, perferendis officiis beatae dolores quia tempora cupiditate
+        reprehenderit doloremque, necessitatibus, repudiandae corrupti quis
+        officia. Quas, eius assumenda nostrum enim molestias voluptatem placeat
+        eos dignissimos laborum natus illo inventore officiis.
+      </p>
+
+      <!-- You can do responsive images too with direct HTML -->
+      <!-- In mobile sizes, we want to load small images -->
+      <picture>
+        <source
+          media="(max-width: 550px)"
+          srcset="https://placekeanu.com/550/250"
+        />
+        <source
+          media="(max-width: 700px)"
+          srcset="https://placekeanu.com/700/250"
+        />
+        <source
+          media="(max-width: 900px)"
+          srcset="https://placekeanu.com/900/250"
+        />
+        <img
+          src="https://placekeanu.com/901/250"
+          alt=""
+          style="width: 100%; border: 1px solid"
+        />
+      </picture>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>

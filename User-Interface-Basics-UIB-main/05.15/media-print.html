@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media print</title>
+    <style>
+      @media print {
+        body {
+          background-color: red;
+        }
+        p {
+          display: none;
+        }
+        body::after {
+          content: "don't print me";
+          font-size: 240px;
+          text-transform: uppercase;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>Good morning</p>
+  </body>
+</html>

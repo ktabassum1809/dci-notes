@@ -1,0 +1,25 @@
+{
+  "name": "PB-language-array-basic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "task-01.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "rewire": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DigitalCareerInstitute/PB-language-array-basic",
+    "id": 541568014
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DigitalCareerInstitute/PB-language-array-basic/issues"
+  },
+  "homepage": "https://github.com/DigitalCareerInstitute/PB-language-array-basic#readme"
+}

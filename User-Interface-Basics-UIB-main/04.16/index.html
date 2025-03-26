@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="John Doe" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Internal CSS -->
+    <style>
+      /* Element, class and ID selectors */
+
+      li {
+        /* this will select ALL the 'li' elements (not very specific) */
+        color: green;
+      }
+      .fav-items {
+        color: red;
+      }
+      #my-orange-item {
+        color: orange;
+      }
+      /*
+       "Descendent combinator"
+        Selects list items that are descendants of ol
+      */
+      ol li {
+        color: rgba(10, 220, 206);
+      }
+      /*
+        "Child combinator"
+        Selects the spans that are direct children of the divs that are direct children of #parent-box
+      */
+
+      #parent-box > div > span {
+        text-decoration: underline;
+      }
+    </style>
+    <title>my-html</title>
+  </head>
+  <body>
+    <h1>Hello world</h1>
+    <p>testing text</p>
+
+    <!-- Inline CSS overrides external and internal -->
+    <p style="color: blue; font-size: 2rem">
+      welcome to <strong title="Digital Career Institute"> DCI </strong>
+    </p>
+
+    <ul>
+      <li class="fav-items">item 1</li>
+      <li class="fav-items">item 2</li>
+      <li>item 3</li>
+    </ul>
+
+    <h3>This is a heading H3</h3>
+
+    <ol type="I">
+      <li class="some-name">item a</li>
+      <li>item b</li>
+      <li id="my-orange-item">item c</li>
+      <li>item d</li>
+      <li class="fav-items" id="another-name">item e</li>
+    </ol>
+
+    <div id="parent-box">
+      here are my fav greetings: <br />
+      <span>hi</span>
+      <div><span> hi 2</span></div>
+      <div>hello</div>
+    </div>
+    
+  </body>
+</html>

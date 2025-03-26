@@ -1,0 +1,32 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --my-color: blue;
+}
+
+.box1{
+  color: var(--my-color);
+}
+
+
+.box4{
+  color: var(--my-color);
+  background-color: rgb(26, 246, 246);
+  font-size: 30px;
+  padding: 40px;
+
+  p{
+    color: red;
+    font-size: 15px;
+  }
+
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+

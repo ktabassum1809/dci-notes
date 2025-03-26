@@ -1,0 +1,29 @@
+@import "./my-default-styling.scss";
+
+$my-text-decoration: underline;
+$my-new-color: red;
+
+.box1{
+    text-decoration: $my-text-decoration;
+    color: $my-new-color;
+    
+    &:hover{
+        cursor: pointer;
+    }
+
+     p{
+        font-size: 20px;
+        color: blue;
+    }
+}
+
+.box2{
+  @include my-fancy-element-style;
+
+  @extend .box1;
+}
+
+
+.box3{
+ @include my-fancy-element-style
+}

@@ -1,0 +1,32 @@
+:root {
+    font-size: 20px;
+}
+
+body {
+    height: 8500px;
+    width: 2000px;
+    margin: 0;
+    padding: 0;
+}
+
+.grandpa {
+    width: 100%;
+    height: 20vh;
+    border: 1px solid red;
+    font-size: 10px;
+    background-color: red;
+}
+
+.parent {
+    width: 250px;
+    height: 300px;
+    border: 1px solid black;
+    font-size: 2em;
+}
+
+.child {
+    width: 125px;
+    height: 150px;
+    border: 1px solid blue;
+    font-size: 1.6rem;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        border: 1px dotted black;
+        width: 400px;
+        height: 400px;
+        background-color: aqua;
+        color: red;
+        font-size: 30px;
+        text-decoration: none;
+      }
+
+      #child-box {
+        border: 1px dashed;
+        width: 200px;
+        height: inherit;
+        /* color is by default inherited, (h1 inherited the color red from the parent) */
+        color: initial;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      parent container
+      <h1>Hello world</h1>
+      <a href="#">click me</a> <br />
+      <div id="child-box">
+        child box
+        <div id="grandchild">grand child</div>
+      </div>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+  </body>
+</html>

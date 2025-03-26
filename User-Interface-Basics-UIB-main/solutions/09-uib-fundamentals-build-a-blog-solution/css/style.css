@@ -1,0 +1,14 @@
+.postborder {
+  border: 5px solid black;
+  width: 400px;
+  background: #eee;
+}
+.post {
+  border: 5px solid #eee;
+}
+.divider {
+  border: 5px solid white;
+}
+img {
+  border: 1px solid black;
+}

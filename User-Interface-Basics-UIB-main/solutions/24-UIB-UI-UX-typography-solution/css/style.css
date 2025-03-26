@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: 'IBM Plex Serif', serif;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.6;
+  background-image: url('../img/bg.jpg');
+}
+
+/* Navbar */
+
+#navbar {
+  margin: 2rem 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+li {
+  display: inline-block;
+  padding: 1rem 0;
+}
+
+li:not(first-child) {
+  margin-left: 2rem;
+}
+
+/* link,visited,focus,hover,active */
+
+li a:link {
+  text-decoration: none;
+  font-weight: 500;
+  color: #660000;
+}
+
+li a:visited {
+  color: #aa0e0e;
+}
+
+li a:hover {
+  color: #8a0f0f;
+  text-decoration: underline;
+}
+
+li a:active {
+  color: #f52f2f;
+}
+
+/* Main */
+
+main {
+  width: 80vw;
+  margin: 0 auto;
+  padding: 3rem 10rem;
+  border-radius: 1.5rem;
+  background-color: #ffffff9f;
+}
+
+h1 {
+  font-family: 'Noto Serif', serif;
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 400;
+  margin: 3rem 0 4rem 0;
+}
+
+section {
+  margin: 5rem 0;
+  padding: 0 1rem;
+  border-left: 1px solid #b3b3b3;
+}
+
+h2 {
+  font-family: 'Bitter', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+article {
+  margin: 3rem 0;
+  font-size: 1.5rem;
+}
+
+article p:last-of-type {
+  line-height: 1.7;
+}
+
+h3 {
+  margin-top: 1rem;
+}
+
+h3 a:link {
+  text-decoration: none;
+  font-style: italic;
+  color: #660000;
+  font-weight: 400;
+}
+
+h3 a:visited {
+  color: #660000;
+}
+
+h3 a:hover {
+  color: #8a0f0f;
+  text-decoration: underline;
+}
+
+.author {
+  font-weight: 500;
+  margin: 0.5rem 0 1.5rem 4rem;
+}
+
+.author::before {
+  content: '- by';
+  margin-right: 0.5rem;
+  font-style: italic;
+  font-weight: 400;
+}
+
+em {
+  font-weight: 600;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  font-size: 2rem;
+  text-align: center;
+  background-color: #9b9b9b8f;
+}
+
+footer a:link {
+  text-decoration: none;
+  color: #660000;
+  font-weight: 400;
+}
+
+footer a:visited {
+  color: #660000;
+}
+
+footer a:hover {
+  color: #8a0f0f;
+  text-decoration: underline;
+}

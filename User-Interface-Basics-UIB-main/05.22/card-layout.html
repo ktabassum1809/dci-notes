@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Layout</title>
+    <style>
+      .flex-parent {
+        display: flex;
+        border: 1px solid black;
+        justify-content: space-around;
+      }
+      .flex-item {
+        width: 400px;
+        height: min-content;
+        border: 1px red solid;
+        display: flex;
+        flex-direction: column;
+      }
+      img {
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Books</h1>
+    <div class="flex-parent">
+      <div class="flex-item item1">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/a/a4/Ready_Player_One_cover.jpg"
+          alt="Cover of Ready Player One book, yellow title with red background"
+        />
+        <div>
+          <h2>Ready Player One</h2>
+          <p>
+            Ready Player One is a 2011 science fiction novel, and the debut
+            novel of American author Ernest Cline.
+          </p>
+        </div>
+      </div>
+      <div class="flex-item item2">
+        <img
+          src="https://m.media-amazon.com/images/I/91VsRHjTY-L._AC_UF894,1000_QL80_.jpg"
+          alt=""
+        />
+        <h2>Harry Potter Deathly Hallows Book</h2>
+        <p>
+          Harry Potter and the Deathly Hallows is a fantasy novel written by
+          British author J. K. Rowling and the seventh and final novel in the
+          Harry Potter series.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

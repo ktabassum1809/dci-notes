@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Direction & Alignment</title>
+    <style>
+      #left {
+        text-align: left;
+        /* start is the same as left if the direction is set left to right */
+        text-align: start;
+      }
+      #right {
+        text-align: right;
+        /* end is the same as right if the direction is set ltr */
+        text-align: end;
+      }
+      #center {
+        text-align: center;
+      }
+      #justify {
+        text-align: justify;
+      }
+      #pkc-img {
+        height: 50px;
+        border: 1px solid blue;
+      }
+      #img-container {
+        text-align: center;
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Direction and text-align</h1>
+    <!-- (h2^p#id>lorem40)*5 -->
+
+    <h2>Changing the direction</h2>
+    <p dir="rtl">صباح الخير جميعا</p>
+    <h2>Align left or start</h2>
+    <p id="left">
+      Saepe laborum illo unde laudantium voluptate eos distinctio, quisquam
+      laboriosam quis minima! Et error distinctio fuga unde corporis harum natus
+      magni, esse molestiae maiores aut voluptates. Saepe qui minima
+      perferendis, nam rem amet velit similique mollitia unde nisi veniam sit.
+    </p>
+    <h2>Align right or end</h2>
+    <p id="right">
+      Nostrum asperiores, unde esse quasi recusandae nihil! Et soluta, numquam
+      cupiditate ab esse repellat ut labore adipisci doloremque deserunt rerum
+      dolore, in veritatis odio molestias, autem vitae necessitatibus. Nostrum
+      ad perferendis dolor nemo magni, praesentium ut temporibus voluptatum
+      maiores alias?
+    </p>
+    <h2>Align center</h2>
+    <p id="center">
+      Consequuntur, provident assumenda aliquam quae veritatis numquam, maiores
+      vitae ipsa veniam fugit ex iure? Saepe itaque atque ut natus dicta
+      temporibus ad ex incidunt dolores. Iusto suscipit tenetur magnam, corrupti
+      adipisci, odio qui quaerat dolorem optio cum exercitationem,
+      necessitatibus nemo!
+    </p>
+    <h2>Align justify</h2>
+    <p id="justify">
+      Ex, nam, consequuntur ut tempora earum expedita neque explicabo aliquid
+      totam hic numquam est maxime quod sequi qui nihil modi magnam culpa,
+      facilis dolorum iusto quis. Dolorum temporibus in laudantium suscipit
+      ipsum a vero placeat, blanditiis repellat expedita doloremque laboriosam?
+    </p>
+    <div id="img-container">
+      <img
+        id="pkc-img"
+        src="https://upload.wikimedia.org/wikipedia/en/thumb/7/73/Pikachu_artwork_for_Pok%C3%A9mon_Red_and_Blue.webp/256px-Pikachu_artwork_for_Pok%C3%A9mon_Red_and_Blue.webp.png"
+        alt="original pikachu, not the new design"
+      />
+    </div>
+  </body>
+</html>

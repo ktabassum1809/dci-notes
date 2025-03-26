@@ -1,0 +1,17 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #fc8855;
+  color: #333;
+
+  height: 100dvh;
+  display: grid;
+  place-items: center;
+}
+
+main {
+  background: white;
+  width: 380px;
+  padding: 1em;
+}

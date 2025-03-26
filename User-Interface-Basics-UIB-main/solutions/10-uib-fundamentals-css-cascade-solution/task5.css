@@ -1,0 +1,10 @@
+*, html body {
+  color: greenyellow;
+}
+
+p,
+header div,
+h2 {
+  color: palegoldenrod;
+}
+

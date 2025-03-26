@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tables HTML</title>
+    <style>
+      table {
+        border: 10px solid red;
+        border-color: rgb(142, 24, 24) rgb(105, 30, 30) rgb(255, 42, 0)
+          rgba(134, 32, 32, 0.737);
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 500px;
+        caption-side: bottom;
+      }
+      td {
+        border: 2px solid blue;
+        /* background-color: rgba(7, 124, 130, 0.392); */
+        color: rgb(60, 48, 48);
+        padding: 15px;
+      }
+      th {
+        border: 2px solid orange;
+        padding: 20px;
+      }
+
+      /* td:nth-child(even){
+        background-color: lightgrey
+      }
+      td:nth-child(odd){
+        background-color: darkgray;
+      } */
+      /* <An+B>
+	    A is how many jumps and B is when does it start */
+
+      /* td:nth-child(2n+2){
+        background-color: rgb(220, 121, 121);
+      } */
+
+      tbody tr:nth-child(2n + 1) {
+        background-color: rgb(148, 148, 203);
+      }
+      tbody td:nth-child(1n + 2){
+        background-color: rgba(139, 152, 91, 0.3);
+      }
+      tfoot td:last-child{
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>Book collection</caption>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Year</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>The Three Body Problem</td>
+          <td>Liu Cixin</td>
+          <td>2008</td>
+        </tr>
+        <tr>
+          <td>The Little Prince</td>
+          <td>Antoine de Saint-Exupéry</td>
+          <td>1943</td>
+        </tr>
+        <tr>
+          <td>Ready Player One</td>
+          <td>Ernest Cline</td>
+          <td>2011</td>
+        </tr>
+        <tr>
+          <td>The Legend of Drizzt (The Crystal Shard)</td>
+          <td>R. A. Salvatore</td>
+          <td>1988</td>
+        </tr>
+        <tr>
+          <td>Mindfulness in Five Minutes</td>
+          <td>Nicoletta Cinotti</td>
+          <td>2020</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>Total of books</th>
+          <td colspan="2">5</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

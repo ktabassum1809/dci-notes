@@ -1,0 +1,86 @@
+ul,
+li {
+	all: unset;
+}
+
+ul {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+li {
+	flex-grow: 1;
+	margin: 0.3em 0.3em 0 0;
+	padding: 0.3em;
+	text-align: center;
+	border: 1px solid #aaa;
+	border-radius: 0.3em;
+}
+
+.grass {
+	background-color: #78c850; /* Soft Green */
+}
+
+.poison {
+	background-color: #a040a0; /* Muted Purple */
+}
+
+.fire {
+	background-color: #f08030; /* Warm Orange-Red */
+}
+
+.flying {
+	background-color: #a890f0; /* Light Lavender */
+}
+
+.water {
+	background-color: #6890f0; /* Soft Sky Blue */
+}
+
+.bug {
+	background-color: #a8b820; /* Olive Green */
+}
+
+.normal {
+	background-color: #a8a878; /* Soft Beige */
+}
+
+.electric {
+	background-color: #f8d030; /* Pastel Yellow */
+}
+
+.ground {
+	background-color: #e0c068; /* Sandy Tan */
+}
+
+.fairy {
+	background-color: #ee99ac; /* Light Pink */
+}
+
+.fighting {
+	background-color: #c03028; /* Soft Brick Red */
+}
+
+.psychic {
+	background-color: #f85888; /* Bright Coral Pink */
+}
+
+.rock {
+	background-color: #b8a038; /* Golden Brown */
+}
+
+.steel {
+	background-color: #b8b8d0; /* Light Steel Gray */
+}
+
+.ghost {
+	background-color: #705898; /* Deep Purple */
+}
+
+.ice {
+	background-color: #98d8d8; /* Icy Mint Blue */
+}
+
+.dragon {
+	background-color: #7038f8; /* Rich Violet */
+}

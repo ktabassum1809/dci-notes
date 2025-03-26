@@ -1,0 +1,36 @@
+#first-paragraph {
+    color: hsl(16, 100%, 50%);
+}
+
+.btn-hover {
+    color: orange;
+}
+
+.btn-hover:hover{
+    background-color: blue;
+    color: black;
+}
+
+.btn-hover:active{
+    color: red;
+}
+
+.btn-hover:visited{
+    color: green;
+}
+
+.btn-vlad {
+    background-color: black;
+    color: red;
+    font-weight: 900;
+    font-size: 20px;
+    border: yellow 2px solid;
+    padding: 20px 40px;
+}
+
+.btn-vlad:hover{
+    background-color: blue;
+    color: yellow;
+    font-weight: 400;
+    font-size: 50px;
+}

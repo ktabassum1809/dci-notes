@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+.box {
+  /* margin: 10px; */
+  height: 250px;
+  padding: 50px;
+}
+
+.box1 {
+  border: 10px solid black;
+  box-sizing: border-box;
+  padding-top: 50px;
+}
+
+.box2 {
+  border: 10px solid red;
+  box-sizing: content-box;
+}

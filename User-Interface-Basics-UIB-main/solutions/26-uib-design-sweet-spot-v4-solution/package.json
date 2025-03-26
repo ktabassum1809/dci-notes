@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "test": "jest --runInBand --detectOpenHandles --forceExit"
+  },
+  "autograding": {
+    "setup": "cd ./node_modules/puppeteer && npm run postinstall"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DCI-Webdev/uib-design-sweet-spot-v4",
+    "id": 781386481
+  },
+  "devDependencies": {
+    "jest": "^29.3.1",
+    "puppeteer": "^19.4.1"
+  }
+}

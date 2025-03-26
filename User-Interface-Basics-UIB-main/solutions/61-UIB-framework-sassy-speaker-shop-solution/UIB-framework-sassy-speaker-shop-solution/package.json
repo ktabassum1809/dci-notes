@@ -1,0 +1,13 @@
+{
+  "name": "sassy-speaker-shop",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "compile": "sass styles.scss styles.css --no-source-map --watch"
+  },
+  "author": "dci",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.54.4"
+  }
+}

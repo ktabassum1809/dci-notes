@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    header {
+      height: 75px;
+      background-color: aqua;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .my-menu {
+      margin: 10px;
+    }
+    .my-menu:hover {
+      cursor: pointer;
+      color: red;
+    }
+
+    .container {
+      position: relative;
+    }
+    .drop {
+      display: none;
+      position: absolute;
+      right: 0;
+      padding: 30px;
+      width: fit-content;
+      list-style-type: none;
+      background-color: rgba(100, 200, 50, 0.5);
+    }
+    .container:hover .drop {
+      display: block;
+    }
+  </style>
+  <body>
+    <header>
+      this is the header
+      <span class="container">
+        <i class="fa-solid fa-bars my-menu"></i>
+        <ul class="drop">
+          <li>item1</li>
+          <li>item2</li>
+          <li>item3</li>
+          <li>item4</li>
+        </ul>
+      </span>
+    </header>
+    <main>
+      this is main
+      <i class="fa-solid fa-heart fa-beat" style="color: #fe2020"></i> <br />
+      loading <i class="fa-solid fa-spinner fa-spin-pulse"></i>
+    </main>
+    <footer>this is footer</footer>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/a75e292bfc.js"
+    crossorigin="anonymous"
+  ></script>
+</html>

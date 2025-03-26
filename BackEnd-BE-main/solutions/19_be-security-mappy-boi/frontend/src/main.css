@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.leaflet-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.form-fields {
+  background: lightblue;
+  padding: 10em;
+  min-height: 100px;
+  height: 90vh;
+  height: 90dvh;
+}
+
+textarea {
+  width: 100%;
+  padding: 0;
+  height: 4em;
+}

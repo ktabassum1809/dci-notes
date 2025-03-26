@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Absolute</title>
+    <style>
+      header {
+        border: 1px black solid;
+        height: 100px;
+        /* position: static; */
+        position: relative;
+        top: 20px;
+        background-color: black;
+      }
+      #flow {
+        border: 1px red solid;
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        top: -10px;
+        left: 10px;
+        background-color: red;
+      }
+      #z-index {
+        border: 1px red solid;
+        height: 50px;
+        width: 50px;
+        background-color: green;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div id="flow">The flow breaker</div>
+      <div id="z-index">The z-index</div>
+    </header>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "sass-random-bars",
+  "version": "1.0.0",
+  "main": "index.html",
+  "devDependencies": {
+    "sass": "^1.77.2"
+  },
+  "scripts": {
+    "start": "sass --watch src/scss:src/css --style compressed"
+  }
+}

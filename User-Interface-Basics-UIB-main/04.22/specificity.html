@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+
+      #box2 {
+        color: green;
+      }
+      /* specificity is stronger than cascading */
+      div {
+        border: 1px solid black;
+        color: blue;
+      }
+
+      #container > #box1 > .box {
+        /* specificity score: 2,1,0 */
+        color: rgb(255, 255, 0);
+      }
+
+      #box1 > .box {
+        /* 1,1,0 */
+        color: cyan;
+      }
+
+      /* when 2 css selectors have the same specificity score, then the one that comes at the bottom wins! (cascading) */
+      .second-parent {
+        /* 0,1,0 */
+        color: orange;
+      }
+      .box {
+        /* 0,1,0 */
+        color: red;
+      }
+
+      #box1 {
+        width: 50%;
+        border-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 id="sitetitle"><div class="logo">logo</div></h1>
+    </header>
+    <div id="container">
+      this is the parent div
+      <h1>Hello world</h1>
+      <div id="box1" class="box second-parent">
+        this is box1
+        <div class="box">this is the grandchild</div>
+      </div>
+      <div id="box2" class="box">this is box 2</div>
+    </div>
+  </body>
+</html>

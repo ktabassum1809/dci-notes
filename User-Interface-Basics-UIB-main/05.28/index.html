@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        border: 2px dashed red;
+        padding: 10px;
+
+        display: grid;
+        
+        /* grid-template-columns: repeat(4, 1fr); */
+
+        /* renaming the lines of the columns */
+        /* grid-template-columns: [uno] 1fr [duo] 1fr [xyz] 1fr [four] 1fr [five]; */
+
+        grid-template-rows: repeat(4, 100px);
+
+        gap: 10px;
+
+        /* naming the grid areas */
+        grid-template-areas:
+          "profile profile header header"
+          "profile profile main main"
+          "pic1 contacts main main"
+          "pic2 contacts main main";
+      }
+
+      .item {
+        border: 1px solid black;
+        padding: 20px;
+        display: grid;
+        place-items: center;
+      }
+
+      /* .container div:nth-of-type(4){} */
+
+      .item:nth-child(1) {
+        /* grid-column-start: uno;
+           grid-column-end: xyz;
+           grid-row-start: 1;
+           grid-row-end: 3; */
+        grid-area: profile;
+      }
+
+      .item:nth-child(2) {
+        /* grid-column:  3/5; 
+           grid-row: 1/2; */
+        grid-area: header;
+      }
+
+      .item:nth-child(3) {
+        /* row-start/column-start/row-end/column-end */
+        /* grid-area: 3/1/4/2; */
+        grid-area: pic1;
+      }
+
+      .item:nth-child(4) {
+        /* grid-area: 3/2/5/3; */
+        grid-area: contacts;
+      }
+
+      .item:nth-child(5) {
+        /* grid-column: 3/span 2;
+           grid-row: 2/span 3; */
+        /* grid-area: 2/3/span 3/span 2; */
+        grid-area: main;
+      }
+
+      .item:nth-child(6) {
+        grid-area: pic2;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Emmet shortcut is: .container>.item{$}*6 -->
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+  </body>
+</html>

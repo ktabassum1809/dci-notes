@@ -1,0 +1,16 @@
+{
+  "name": "be-environment-variables",
+  "version": "1.0.0",
+  "description": "This project will allow you to practise using the `process.env` environment variable as well as the `dotenv` package",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
+}

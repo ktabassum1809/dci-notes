@@ -1,0 +1,7 @@
+[
+  { "id": 1, "name": "agent1", "password": "c7561db7a418dd39b2201dfe110ab4a4" },
+  { "id": 2, "name": "agent2", "password": "3bfea1f31bb5a1e40786ff7eef41bf81" },
+  { "id": 3, "name": "agent3", "password": "a1ec23e9b9ab43a88222d9949ee26499" },
+  { "id": 4, "name": "agent4", "password": "639bae9ac6b3e1a84cebb7b403297b79" },
+  { "id": 5, "name": "agent5", "password": "639bae9ac6b3e1a84cebb7b403297b79" }
+]

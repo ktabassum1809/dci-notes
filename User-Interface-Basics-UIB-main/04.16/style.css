@@ -1,0 +1,14 @@
+/* This is an example of an _external_ CSS file. */
+
+h3 {  /* selecting all my h3 elements */
+    color:chartreuse;
+    text-decoration: underline;
+}
+
+.some-name {
+    color: purple;
+}
+
+#another-name {
+   color: pink; 
+}

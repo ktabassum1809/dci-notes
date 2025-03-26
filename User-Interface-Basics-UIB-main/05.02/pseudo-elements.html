@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo-elements</title>
+    <style>
+        blockquote::before {
+            content:" < "
+        }
+        blockquote::after {
+            content: " > "
+        }
+        a[target='_blank']::before {
+            content: " 🔗 "
+        }
+        li::before{
+            content: " 😼 "
+        }
+        li {
+            list-style-type: none;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>My cat</h1>
+    <p>
+      My cat eats food from
+      <a href="https://www.purina.de/" target="_blank">Purina</a> and they go
+      3-4 times a year to the vet. <a href="#">This</a> is the profile of my cat
+      and I love him so much.
+    </p>
+    <blockquote>
+      One is the devil, the second is a hard cuddler, cute cuddler and eater
+      (but he prefers
+      <a href="https://www.zooplus.com/shop/cats/dry_cat_food" target="_blank"
+        >Zoo Plus</a
+      >)
+    </blockquote>
+    <ul>
+      <li>Pixie</li>
+      <li>Eda</li>
+      <li>Gimli</li>
+      <li>Legolas</li>
+    </ul>
+    <blockquote>Hello</blockquote>
+    <ul>
+        <li>Pedro</li>
+        <li>Pedro</li>
+      </ul>
+  </body>
+</html>

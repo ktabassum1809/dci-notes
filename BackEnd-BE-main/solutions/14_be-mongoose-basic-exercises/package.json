@@ -1,0 +1,10 @@
+{
+  "type": "module",
+  "scripts": {
+    "write": "node --env-file=.env write.js",
+    "read": "node --env-file=.env read.js"
+  },
+  "dependencies": {
+    "mongoose": "^8.4.1"
+  }
+}

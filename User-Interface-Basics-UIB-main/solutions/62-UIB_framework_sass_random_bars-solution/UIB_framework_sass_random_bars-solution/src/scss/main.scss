@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eaf2a6;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+main > div {
+    height: 100%;
+    width: 20px;
+    background: purple;
+    height: 100 + random(200) + px;
+}
+
+main > div:nth-of-type(odd) {
+    background: radial-gradient(circle at -5px 30px, #c57eda, #730092);
+    align-self: flex-start;
+    // move 12 px up
+    transform: translateY(-12px);
+}
+
+main > div:nth-of-type(even) {
+    background: radial-gradient(circle at 10px 300px, #ffffff, #ff00ac);
+    align-self: flex-end;
+    // move 12 px down
+    transform: translateY(12px);
+}
+
+// loop through the divs and randomize the border-radius
+@for $i from 1 through 30 {
+    main > div:nth-of-type(#{$i}) {
+        border-radius: 5+random(10) + px 5+random(10) + px 5+random(10) + px 5+random(10) + px;
+        height: 50 + random(210) + px;
+    }
+}

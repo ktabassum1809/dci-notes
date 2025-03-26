@@ -1,0 +1,12 @@
+.card {
+    background-color: white;
+    border: 1px red solid;
+    color: black;
+  }
+  
+  .card-img {
+    height: 200px;
+    /* width: 200px; */
+    /* background-color: white */
+  }
+

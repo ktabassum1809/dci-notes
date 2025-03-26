@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>7 Box Layout</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .flex-container > div {
+        height: 150px;
+        flex-basis: 100%;
+      }
+
+      .flex-item-1 {background-color: purple;}
+      .flex-item-2 {background-color: blueviolet;}
+      .flex-item-3 {background-color: blue;}
+      .flex-item-4 {background-color: green;}
+      .flex-item-5 {background-color: yellow;}
+      .flex-item-6 {background-color: darkorange;}
+      .flex-item-7 {background-color: red;}
+
+      @media (min-width: 601px){
+        .flex-container .flex-item-3,
+        .flex-container .flex-item-4,
+        .flex-container .flex-item-5 {
+          flex-basis: 33.33%;
+          /* flex-grow: 1;
+          flex-shrink: 1; */
+        }
+      }
+      @media (min-width: 801px){
+        .flex-container .flex-item-1,
+        .flex-container .flex-item-2,
+        .flex-container .flex-item-6,
+        .flex-container .flex-item-7{
+          flex-basis: 50%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="flex-container">
+      <div class="flex-item-1">001</div>
+      <div class="flex-item-2">002</div>
+      <div class="flex-item-3">003</div>
+      <div class="flex-item-4">004</div>
+      <div class="flex-item-5">005</div>
+      <div class="flex-item-6">007</div>
+      <div class="flex-item-7">008</div>
+    </div>
+  </body>
+</html>

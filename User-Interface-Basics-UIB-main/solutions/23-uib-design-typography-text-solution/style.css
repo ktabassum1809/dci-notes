@@ -1,0 +1,77 @@
+/* Task 1 */
+:root {
+  font-family: "Open Sans", sans-serif;
+}
+h1 {
+  text-decoration: underline;
+}
+li {
+  font-weight: 300;
+}
+.heading {
+  text-shadow: 1.5px 1.5px grey;
+  text-transform: uppercase;
+}
+.note {
+  font-weight: 700;
+  font-style: italic;
+}
+.todo-item {
+  text-decoration: line-through;
+}
+
+/* Task 2 */
+#quotes li::before,
+#quotes li::after {
+  content: "";
+  display: inline-block;
+  background-image: url(quote.png);
+  width: 1em;
+  height: 1em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 3px;
+}
+#quotes li::after {
+  background-image: url(quote.png);
+  rotate: 180deg;
+}
+
+/* Task 3 */
+a.pdf::after,
+a.xls::after,
+a.doc::after {
+  content: "";
+  display: inline-block;
+  height: 1.2em;
+  width: 1.2em;
+  margin-left: 10px;
+  background-size: contain;
+}
+a.pdf::after {
+  background-image: url(https://img.icons8.com/officel/64/000000/pdf.png);
+}
+a.xls::after {
+  background-image: url(https://img.icons8.com/dusk/64/000000/ms-excel.png);
+}
+a.doc::after {
+  background-image: url(https://img.icons8.com/dusk/64/000000/ms-word.png);
+}
+
+/* Task 4 */
+.sandwich {
+  border: 1px solid;
+  margin-bottom: 3vh;
+}
+.sandwich::before,
+.sandwich::after {
+  content: "";
+  height: 10px;
+  display: block;
+}
+.sandwich::before {
+  background: linear-gradient(to left, #eaee44, #33d0ff);
+}
+.sandwich::after {
+  background: linear-gradient(to right, #eaee44, #33d0ff);
+}

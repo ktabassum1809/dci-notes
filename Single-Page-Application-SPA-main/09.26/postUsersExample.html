@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posting users</title>
+    <style>
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <form id="registration">
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" name="full-name" required>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <script>
+        const form = document.getElementById('registration');
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault()
+
+            const data = {
+                name: form.querySelector("#full-name").value,
+                username: form.querySelector('#username').value,
+                password: form.querySelector('#password').value
+            }
+
+            const url = 'https://jsonplaceholder.typicode.com/users'
+            const options = {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            }
+
+            const response = await fetch(url, options)
+
+            if (response.ok) {
+                alert("Registration successful")
+            }
+
+            const result = await response.json()
+            console.log(data)
+            console.log(result)
+        })
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local storage example</title>
+</head>
+<body>
+    <button onclick="localStorage.clear(); location.reload()">Clear name</button>
+    <script>
+        const name1 = "Nausica"
+        const name2 = "Brian"
+        const name3 = "Tabassum"
+
+        localStorage.setItem("nameOne", name1)
+        localStorage.setItem("nameTwo", name2)
+        localStorage.setItem("nameThree", name3)
+
+        localStorage.removeItem("nameOne")
+
+        console.log(localStorage)
+    </script>
+</body>
+</html>
+
+<!-- localStorage -> "name": "Nausica" -->

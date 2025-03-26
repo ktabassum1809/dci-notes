@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      * {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: inherit;
+      }
+      ::root {
+        font-size: 16px;
+      }
+
+      h1 {
+        color: slateblue;
+        text-align: center;
+        font-size: 2.4rem;
+      }
+
+      /* Fieldset & legend */
+      fieldset {
+        margin: 1em 0;
+        max-width: 400px;
+        border-style: dashed;
+        padding: 1.5em;
+      }
+
+      #required {
+        border-color: #aaf;
+      }
+
+      #optional {
+        border-color: #ccc;
+
+      }
+
+      /* Input controls and labels */
+      #pin { width: 6.3em; }
+      fieldset > input {
+        margin-bottom: 1em;
+      }
+      label {
+        display: block;
+        margin-bottom: 0.2em;
+      }
+      #radiogroup label {
+        display: inline;
+      }
+
+      /* Explanation texts */
+      .infotext::before {
+        content: "ℹ️";
+      }
+      .infotext {
+        text-align: center;
+        width: 1.3rem;
+        height: 1.2rem;
+        overflow: hidden;
+        display: inline-block;
+        position: relative;
+        top: 0.3em;
+        background: #eee;
+        margin-left: 0.2em;
+        padding: 0;
+      }
+      .infotext.active {
+        border: 2px solid slateblue;
+        position: relative;
+        text-align: left;
+        max-width: 300px;
+        width: auto;
+        height: auto;
+        padding: 0.4em;
+        box-shadow: 0 0 15px 2px #000;
+        z-index: 2;
+      }
+
+      /* Action button group */
+      button {
+        padding: .4em 2em;
+        border: 1px solid;
+        border-radius: 0.3em;
+      }
+
+      #submit {
+        background-color: #7f7;
+        font-weight: bold;
+        color: slateblue;
+      }
+
+      #save {
+        background-color: #eee;
+        color: #88f;
+      }
+
+      /* Discussion CTA */
+      p { color: gray; }
+
+      /* Error message */
+      .error {
+        color: red;
+        background: lightpink;
+        padding:  0.2em;
+        margin:   0.2em 0;
+        border: 1px dashed;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Employee registration form</h1>
+
+    <form>
+      <fieldset id="required">
+        <legend>Required</legend>
+        <label for="legalName">Legal name</label>
+        <input type="text" name="legalName" id="legalName" maxlength="50" required>
+
+        <label for="email">E-mail</label>
+        <div class="error">Address already in use</div>
+        <input type="email" name="email" id="email" value="lemon@example.org" required data-error="">
+
+        <div id="radiogroup">
+          <div>
+            Gender
+            <span class="infotext">
+              This information is required because of statistics we legally have to report to the government
+            </span>
+          </div>
+          <input type="radio" name="gender" value="f" required> <label for="f">Female</label>
+          <input type="radio" name="gender" value="m"> <label for="m">Male</label>
+          <input type="radio" name="gender" value="d"> <label for="d">Other</label>
+        </div>
+
+        <label>
+          Address
+          <span class="infotext">
+            Used for shipping company swag and oh yeah, I guess contracts and work equipment too.
+          </span>
+          <br>
+        </label>
+        <textarea name="address" id="address" cols="30" rows="4" required></textarea>
+      </fieldset>
+
+      <fieldset id="optional">
+        <legend>Optional</legend>
+
+        <label for="displayName">
+          Preferred name
+        </label>
+        <input type="text" name="displayName" id="displayName" maxlength="50">
+
+        <label>
+          GitHub username
+          <span class="infotext">
+            If you leave this empty, a new account will be created for you.
+          </span>
+        </label>
+        <input type="text" name="username" id="username" maxlength="16">
+
+        <label>
+          Custom pin
+          <span class="infotext">
+            Six (6) digit code for office access; leave empty to have a code generated for you
+          </span>
+        </label>
+        <input type="number" name="pin" id="pin" max="999999" placeholder="e.g. 918273">
+
+        <label for="dob">
+          Date of birth
+          <span class="infotext">
+            Asked to send you a small birthday gift.
+          </span>
+        </label>
+        <input type="date" name="dob" id="dob">
+
+        <p>Discuss: should optional fields be moved onto a users profile page?</p>
+      </fieldset>
+
+      <div class="actions">
+        <button id="submit">Submit for processing</button>
+        <button id="save">Save inputs to continue later</button>
+      </div>
+    </form>
+
+    <script>
+      document.addEventListener("pointerdown", e=>{
+        document.querySelector(".active")?.classList.remove("active")
+        if(e.target.classList.contains("infotext")) {
+          e.target.classList.toggle("active")
+        }
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      header {
+        border: 10px dashed black;
+        /* border-bottom: 20px solid black; */
+        margin: 50px;
+        /* margin-right: 20px; */
+        /* margin: 10px 30px; first value for top & bottom, second value for right & left */
+        padding: 30px;
+        /* padding-left: 30px; */
+
+        /*         top right bottom left */
+        /* padding: 5px 10px 20px 15px; */
+        outline: 5px solid red;
+        background-color: aqua;
+      }
+      #testing {
+        /* display: inline; this line will turn the div #testing into an inline element */
+        border: 2px solid blue;
+      }
+
+      #restricted {
+        /* for centering the element horizontally only */
+        margin: auto;
+        width: 500px;
+        height: 300px;
+        border: 2px solid black;
+        /* to control the overflowing content */
+        overflow: scroll;
+      }
+      main {
+        border: 1px solid black;
+      }
+      .container {
+        border: 1px solid black;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 10px;
+      }
+      img {
+        border: 1px solid black;
+      }
+
+      .nav {
+        /* we can't change the width and height of inline elements */
+        width: 1000px;
+        height: 1000px;
+
+        /* we can still use margin and padding but notice difference between horizontal and vertical!  */
+        margin: 50px;
+        padding: 10px;
+        border: 5px dashed green;
+      }
+    </style>
+  </head>
+  <body>
+    <header>hi i'm the header</header>
+    <main>
+      <p id="restricted">
+        hello world, Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        Qui blanditiis earum officiis et, labore dolorum dolorem consequuntur
+        facere id ex libero quisquam dolores sit cum perspiciatis. Tempora,
+        exercitationem qui pariatur dolore facilis possimus sunt at quidem ipsum
+        quaerat laudantium quae accusantium placeat doloremque magnam enim
+        officiis voluptas? Qui ad, quas, veritatis voluptatibus sapiente,
+        officia velit possimus corporis sed voluptatem nam! Minima impedit illum
+        ut veritatis id reiciendis ipsam qui, officia modi voluptas voluptatibus
+        sequi quisquam doloremque, odio reprehenderit rerum officiis cumque,
+        quod eligendi cum! Voluptatibus, accusamus reiciendis. Quo obcaecati a
+        numquam eaque, molestias commodi soluta excepturi vel ducimus, ipsum
+        laudantium aliquid atque qui nisi labore sed quis illum ex! Libero
+        voluptate in vitae, aut exercitationem a minus, doloremque non veritatis
+        dolorem iste rem! Optio, cum repudiandae facilis aspernatur nobis
+        maiores fugit incidunt. Quos sapiente magnam nam, unde iusto cupiditate
+        nulla facilis a, nostrum ab mollitia reiciendis nemo, atque ad beatae
+        laborum provident quas laboriosam necessitatibus amet! Quos quo ipsum
+        cumque, alias exercitationem quasi quas atque! Qui eveniet est beatae
+        ipsa expedita magni, voluptatibus facere ducimus autem, eligendi quia!
+        Quod nobis temporibus sed vitae est assumenda eligendi dolore,
+        cupiditate voluptas quia velit tempore cumque qui nulla, recusandae
+        veniam molestiae expedita consectetur id numquam ipsa. Quis fugit,
+        incidunt doloremque aperiam eius cumque repellendus consectetur
+        consequuntur assumenda alias at neque repudiandae perspiciatis nisi
+        culpa obcaecati repellat? Magni eaque dolore laboriosam tempora omnis
+        natus minus eligendi necessitatibus, dignissimos atque est mollitia
+        similique possimus ducimus quia! Beatae cupiditate voluptates odio natus
+        sunt, numquam quisquam! Quam praesentium ab adipisci. Amet explicabo
+        quos eos porro vel nobis impedit fugiat voluptas est quidem? Architecto
+        explicabo error quos commodi! Ipsa dolor deleniti voluptatem inventore,
+        beatae laudantium neque nam debitis non. Reprehenderit aut dolorum
+        facere fuga adipisci veniam quaerat, earum nisi quae maiores pariatur
+        officia, dignissimos voluptates ipsa laudantium! Impedit laborum
+        quaerat, nisi doloremque qui rem corporis veniam perspiciatis numquam
+        atque corrupti nesciunt debitis dolorum odit voluptates facere veritatis
+        fugit asperiores distinctio blanditiis saepe modi deserunt? Laudantium
+        laborum alias, soluta repudiandae ratione perferendis adipisci nobis
+        corrupti est illum? Facere quidem impedit a illo cupiditate dolore
+        consequuntur, ducimus error nesciunt consequatur aut corporis. Aliquam
+        velit obcaecati id sequi blanditiis. Vel voluptatum dolorem soluta sequi
+        odio mollitia eveniet inventore quos totam distinctio, autem aperiam
+        magni. Perferendis alias provident dolores eligendi? Voluptas
+        exercitationem sit, amet alias ipsa, autem, itaque aut quia architecto
+        odit maxime mollitia hic expedita quis explicabo cumque officia fugiat
+        reiciendis. Ex recusandae ea rem, porro eius, impedit tempore quod
+        aperiam hic unde similique itaque iusto! Ipsa dolores nesciunt
+        dignissimos hic sint illum cum ipsum reprehenderit incidunt asperiores
+        maiores officia voluptates alias reiciendis esse neque, dolore labore
+        quisquam qui, illo ducimus. Nobis perferendis quos earum ad. Perferendis
+        corrupti corporis dignissimos natus tempora reprehenderit. Quod
+        doloribus hic praesentium harum. Expedita possimus consequuntur fugit
+        laboriosam alias, assumenda amet nemo deleniti reiciendis deserunt rerum
+        earum rem enim delectus inventore laborum tempora provident debitis
+        fugiat mollitia, consectetur sapiente. Repudiandae assumenda rerum
+        recusandae cupiditate tenetur porro officiis harum. Earum error autem,
+        ipsum et pariatur nobis veniam!
+      </p>
+      <p class="container">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati,
+        fugiat? Sunt fugit id et dolorem eum cumque quia exercitationem animi
+        quas eos? Perspiciatis sequi porro debitis. A explicabo, eaque odit
+        deleniti distinctio illo repellat facere repudiandae similique esse
+        repellendus unde quasi, ut harum placeat praesentium id veniam delectus
+        eum laborum! Ipsam repellat exercitationem omnis rerum qui ex, facilis
+        perspiciatis dolorum molestias asperiores, odio nobis ullam tempora
+        labore iusto et necessitatibus velit minus? Nihil laudantium vitae
+        perferendis vel recusandae ducimus repellat laboriosam, sapiente porro?
+        Quibusdam hic exercitationem, dignissimos cum enim neque repellendus
+        cumque eveniet provident aliquid eaque! Repellat nemo eaque optio?
+      </p>
+      <div id="testing">hello i'm a block element</div>
+
+      <span class="nav">
+         <a href="#"> home</a>
+         <a href="#">about</a> 
+      </span>
+
+      <button>sign up</button>
+      <img src="./assets/top.png" />
+      <span> i am a span, i'm an inline wrapper/container </span>
+    </main>
+    <footer>this is the footer</footer>
+  </body>
+</html>

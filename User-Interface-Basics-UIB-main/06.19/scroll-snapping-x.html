@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snap Scrolling</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-y: hidden;
+      }
+      .container {
+        scroll-snap-type: x mandatory;
+        overflow-x: scroll;
+        height: 100%; /*this is redundant because the heaight and width already comes from the child*/
+        width: 100%; /*same as above*/
+        display: flex;
+      }
+      .child {
+        flex: none;
+        height: 100vh;
+        width: 97vw; /*UX - I changed this to 97 so you can see that you can scroll to the next element (that there's something there)*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        color: white;
+        scroll-snap-align: start;
+      }
+      .screen1 {
+        background-color: #b93c3c;
+      }
+
+      .screen2 {
+        background-color: #2e922e;
+      }
+
+      .screen3 {
+        background-color: #3434b0;
+      }
+
+      .screen4 {
+        background-color: #ffb804;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="child screen1">Screen 1</div>
+      <div class="child screen2">Screen 2</div>
+      <div class="child screen3">Screen 3</div>
+      <div class="child screen4">Screen 4</div>
+    </div>
+  </body>
+</html>

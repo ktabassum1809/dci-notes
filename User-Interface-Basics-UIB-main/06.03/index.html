@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .box,
+      .box2,
+      .box3,
+      .box4 {
+        margin: 100px;
+        border: 1px solid black;
+        background-color: aqua;
+        width: 100px;
+        height: 100px;
+
+        /* for centering:*/
+        display: grid;
+        place-content: center;
+
+        /* transition-property: all;
+          transition-duration: 3s;
+          transition-timing-function: ease-in;
+          transition-delay: 2s; */
+
+        transition: all 2s ease-out 0s;
+      }
+
+      div:nth-child(even) {
+        background-color: coral;
+      }
+
+      .box:hover{
+        width: 200px;
+        height: 200px;
+      }
+
+      .box2:hover {
+        border-radius: 50%;
+        background-color: yellow;
+      }
+
+      .box3:hover {
+        transform: translateX(200px) rotate(90deg);
+      }
+
+      .box4:hover {
+         /* to scale the element 2 times its original size */
+        transform: scale(2);
+        /* to tell the transform where to start (center, top, bottom, left, right...) */
+        transform-origin: top left;
+      }
+
+      /* @media (min-width: 600px) {
+           .box{
+             width: 400px;
+             height: 400px;
+             transition-property: none;
+           }
+        } */
+    </style>
+  </head>
+  <body>
+    <div class="box">hello</div>
+    <div class="box2">hello2</div>
+    <div class="box3">hello3</div>
+    <div class="box4">hello4</div>
+  </body>
+</html>

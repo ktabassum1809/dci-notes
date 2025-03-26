@@ -1,0 +1,18 @@
+.app-box{
+  padding: 30px;
+}
+
+.counter-box{
+  padding: 20px;
+  background-color: rgb(199, 199, 228);
+}
+
+.dark{
+  color: white;
+  background-color: black;
+}
+
+.light{
+  color: blue;
+  background-color: rgb(196, 237, 189);
+}

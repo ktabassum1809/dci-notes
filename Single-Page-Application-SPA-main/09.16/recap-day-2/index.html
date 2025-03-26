@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Node vs Element</title>
+	</head>
+	<body>
+		<header>
+			<h1>Hello world</h1>
+		</header>
+		<main>
+			<h2>Some lorem</h2>
+			<!-- p*6>lorem -->
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, rerum
+				ducimus. Reprehenderit, corrupti iste. Ratione saepe, aliquam reiciendis
+				neque, maiores aliquid sed aut ipsa fugit cupiditate modi! In, quia
+				distinctio.
+			</p>
+			<p>
+				Est, illo nemo rem voluptate debitis magnam sapiente praesentium libero
+				aspernatur animi ducimus qui provident cum tempore nobis esse eius
+				consectetur quam ea. Tenetur nam neque dolores voluptatibus nemo maxime.
+			</p>
+			<p>
+				Iusto, consequuntur nobis! Repellendus quibusdam accusantium expedita
+				pariatur, eum, similique at, velit porro culpa voluptate harum corrupti
+				atque cum sint hic. Reprehenderit optio, fugit et cumque voluptatem
+				assumenda! Sit, doloribus.
+			</p>
+			<p id="red">
+				Nihil perferendis, molestiae unde deleniti quo corrupti rem nemo minima
+				dolor, illo repellendus eaque voluptas veritatis tempore necessitatibus
+				sapiente consequuntur, explicabo esse ut fuga cumque eligendi? Sint eos
+				illo consequatur.
+			</p>
+			<p>
+				Ipsum fugiat quisquam ea placeat deserunt harum nesciunt sint quos
+				praesentium temporibus eius voluptate aut, cupiditate minus atque quia
+				natus repellendus asperiores? Accusamus quo aut ipsam fugiat velit earum
+				autem!
+			</p>
+			<p>
+				Temporibus autem quo modi labore voluptas consequatur hic animi deserunt
+				maxime excepturi vitae, enim corrupti veniam quia harum facilis
+				sapiente, officiis et, optio incidunt. Veritatis ullam placeat quod
+				fugit fuga.
+			</p>
+		</main>
+		<footer>Footer!</footer>
+
+		<script>
+			const target = document.querySelector("#red")
+			console.log("First examples")
+			console.log(target)
+			console.log(target.nodeName)
+			console.log(target.nodeType)
+			console.log(target.parentElement) // You probably want this one
+			console.log(target.parentNode)
+			console.log(target.childNodes)
+			console.log(target.children)
+			console.log(target.nextSibling)
+			console.log(target.nextElementSibling)
+			// TEACHER: When showing, you can sometimes use `typeof` to help withthe demo
+			// TEACHER: Remind that nobody remembers all of these
+			// TEACHER: Remind that MDN, Google, API assistants and VSCode autocomplete help
+
+			console.log("Second examples")
+			const main = document.querySelector("main")
+			const p = main.querySelector("p") // select the first "p" inside "main"
+			console.log(p)
+
+			const childNodes = main.childNodes // select all the child nodes
+			// console.log("childNodes", (childNodes[3].data = "I changed the comment!"))
+
+			childNodes.forEach((node) => {
+				if (node.nodeType === Node.COMMENT_NODE) {
+					console.log("Original comment:", node.data)
+					node.data = "I changed the comment!"
+					console.log("Updated comment:", node.data)
+				}
+			})
+		</script>
+	</body>
+</html>

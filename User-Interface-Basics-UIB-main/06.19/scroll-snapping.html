@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Snapping demo</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        height: 100vh;
+        scroll-snap-type: y mandatory; /* Mandatory is more user friendly. Proximity works in a more flowy way */
+        overflow-y: scroll;
+        scroll-padding-top: 0; /* if we want to take into account a little element at the top. Ex: navbar*/
+      }
+      .child {
+        font-size: 40px;
+        color: white;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        scroll-snap-align: start; /* It can also be center or end */
+
+      }
+      .screen1 {
+        background-color: #b93c3c;
+      }
+      .screen2 {
+        background-color: #2e922e;
+      }
+      .screen3 {
+        background-color: #3434b0;
+      }
+      .screen4 {
+        background-color: #ffb804;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="child screen1">Screen 1</div>
+      <div class="child screen2">Screen 2</div>
+      <div class="child screen3">Screen 3</div>
+      <div class="child screen4">Screen 4</div>
+    </div>
+  </body>
+</html>
